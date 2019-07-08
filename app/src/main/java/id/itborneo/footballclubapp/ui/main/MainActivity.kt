@@ -96,7 +96,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         teams.addAll(teamsS)
         teamsAdapter.notifyDataSetChanged()
     }
-
     override fun showLeagues(League: List<League>?) {
         if(League != null){ League.forEach {  leaguesName.add(it.strLeague) }
             setDataSpinner(leaguesName)
@@ -107,7 +106,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
         presenter.onDetach()
         super.onDestroy()
     }
-
     override fun showError(msg: String) {
         Toast.makeText(this,msg, Toast.LENGTH_LONG).show()
     }
